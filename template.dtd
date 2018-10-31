@@ -1,0 +1,20 @@
+<!ELEMENT templates (LogTemplate+)>
+<!ELEMENT LogTemplate (key,value,models)>
+<!ATTLIST LogTemplate key CDATA #REQUIRED>
+
+<!ELEMENT key (#PCDATA)>
+<!ELEMENT value (#PCDATA)>
+<!ELEMENT models (model+)>
+
+<!ELEMENT model (sort,from,time?,simpleValue?,noSql?,value?)>
+<!ELEMENT sort (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+
+<!ELEMENT time (timeFormat)>
+<!ELEMENT timeFormat (#PCDATA)>
+
+<!ELEMENT simpleValue (argNames?,fieldPosition)>
+<!ELEMENT argNames (#PCDATA)>
+<!ELEMENT fieldPosition (#PCDATA)>
+
+<!ELEMENT noSql (fieldPosition)>
