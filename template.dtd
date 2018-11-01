@@ -1,12 +1,12 @@
-<!ELEMENT templates (LogTemplate+)>
-<!ELEMENT LogTemplate (key,value,models)>
-<!ATTLIST LogTemplate key CDATA #REQUIRED>
+<!ELEMENT templates (logTemplate+)>
+<!ELEMENT logTemplate (key,value,models)>
+<!ATTLIST logTemplate key CDATA #REQUIRED>
 
 <!ELEMENT key (#PCDATA)>
 <!ELEMENT value (#PCDATA)>
 <!ELEMENT models (model+)>
 
-<!ELEMENT model (sort,from,time?,simpleValue?,noSql?,value?)>
+<!ELEMENT model (sort,from,time?,simpleValue?,noSql?,value?,sql?)>
 <!ELEMENT sort (#PCDATA)>
 <!ELEMENT from (#PCDATA)>
 
@@ -18,3 +18,10 @@
 <!ELEMENT fieldPosition (#PCDATA)>
 
 <!ELEMENT noSql (fieldPosition)>
+
+<!ELEMENT sql (tableNames,tableFiled,termFiled,termFiledValue?,filedModel?)>
+<!ELEMENT tableNames (#PCDATA)>
+<!ELEMENT tableFiled (#PCDATA)>
+<!ELEMENT termFiled (#PCDATA)>
+<!ELEMENT termFiledValue (#PCDATA)>
+<!ELEMENT filedModel (#PCDATA)>
